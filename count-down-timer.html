@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Timer</title>
+</head>
+<body>
+    <h1 id="timer">Count down:</h1>
+    <script>
+        // Starting value
+        let count = 15;
+
+        // Reference to the HTML element that displays the countdown
+        const timerElement = document.getElementById('timer');
+
+        // Function to update the countdown
+        function updateCountdown() {
+            if (count <= 30) {
+                timerElement.textContent = count;
+                count++;
+            } else {
+                clearInterval(countdownInterval);
+                timerElement.textContent = 'Done!';
+            }
+        }
+
+        // Set the interval to update the countdown every second (1000 milliseconds)
+        const countdownInterval = setInterval(updateCountdown, 1000);
+    </script>
+</body>
+</html>
