@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    <h1>
+        <center>JS multiplication table with For-lopp</center>
+    </h1>
+
+    <script>
+        // Define the size of the multiplication table
+        const size = 10;
+
+        // Create a table
+        for (let i = 1; i <= size; i++) {
+            let row = '';
+            for (let j = 1; j <= size; j++) {
+                // Format the output to align columns
+                row += (i * j).toString().padStart(4, ' ');
+            }
+            console.log(row);
+        }
+    </script>
+</body>
+
+</html>
